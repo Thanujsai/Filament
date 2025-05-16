@@ -1,0 +1,4 @@
+models:
+  Conference:
+    name: string
+    description: string
