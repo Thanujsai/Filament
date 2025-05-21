@@ -25,10 +25,10 @@ class AppPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('app')//changing the id
-            ->path('/')//changing the path
+            ->path('/')//changing the path, This line sets the Filament admin panel's route base path to /, So now, when you visit http://127.0.0.1:8000, you're actually landing directly on the Filament panel, instead of it being at the default /admin path.
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Indigo,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
